@@ -1,8 +1,8 @@
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
 
 /* Se quiser resetar margens/paddings globais */
 
@@ -17,6 +17,7 @@
     background-color: black;
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
 }
 
@@ -26,7 +27,7 @@
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-    color: white;
+    color: rgb(255, 0, 0);
     border-radius: 10px;
     padding: 30px 40px;
 }
@@ -52,7 +53,7 @@
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 40px;
     font-size: 16px;
-    color: white;
+    color: rgb(255, 0, 0);
     padding: 20px 45px 20px 20px;
 }
 
@@ -61,7 +62,7 @@
 }
 
 .input-box i {
-    position: relative;
+    position: absolute;
     right: 20px;
     top: 50%;
     transform: translateY(-50%);
@@ -71,27 +72,45 @@
 .wrapper .remember-forgot {
     display: flex;
     justify-content: space-between;
-    font-size: 14.5px;
+    font-size: 16px;
     margin: -15px 0 15px;
 }
 
-.remember-forgot label input{
-    accent-color: #fff;
-    margin-right: 3px;
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ff0000;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.custom-checkbox:checked {
+  background-color: #ff0000; /* ou qualquer cor de preenchimento */
+  border-color: #ff0000;
+}
+
+.remember-forgot input{
+    accent-color: #a87272;
+    background-color: transparent;
+    margin-right: 6px;
 }
 
 .wrapper .btn {
     width: 100%;
-    height: 50%;
-    background: white;
+    height: 100%;
+    background: rgb(255, 0, 0);
     border: none;
     outline: none;
     border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, .1);
     cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    font-weight: 600;
+    font-size: 24px;
+    color: #000000;
+    font-weight: 550;
 }
 
 .wrapper .register-link {
@@ -100,8 +119,8 @@
     margin: 20px 0 15px;
 }
 
-.register-link p Link {
-    color: white;
+.register-link p a {
+    color: rgb(255, 0, 0);
     text-decoration: none;
     font-weight: 600;
 

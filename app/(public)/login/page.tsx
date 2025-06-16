@@ -19,14 +19,9 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center relative">
-      <div className="relative z-10 bg-white bg-opacity-10 backdrop-blur-md p-8 rounded-xl shadow-lg w-full max-w-md">
-        <h1 className="text-white text-2xl font-semibold mb-6 text-center">Login</h1>
-        <AuthForm
-          type="login"
-          onSubmit={handleLogin}
-        />
-      </div>
-    </div>
+    <AuthForm
+      type="login"
+      onSubmit={handleLogin}
+    />
   )
 }

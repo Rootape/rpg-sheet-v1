@@ -25,7 +25,12 @@ export default function AuthForm({
   return (
     <div className="wrapper">
       <form onSubmit={handleSubmit}>
-          <h1>Login</h1>
+          {type === 'login' && (
+            <h1>Login</h1>
+          )}
+          {type === 'register' && (
+            <h1>Registrar</h1>
+          )}
           <div className="input-box">
               <input
               type="text"
@@ -44,13 +49,15 @@ export default function AuthForm({
           </div>
           {type === 'login' && (
               <div className="remember-forgot">
-                  <label><input type="checkbox"/>Lembre de mim</label>
+                  <label><input type="checkbox" className='custom-checkbox'/>Lembre de mim</label>
               </div>
           )}
           <button type="submit" className="btn">Enviar</button>
+          {type === 'login' && (
             <div className="register-link">
-                <p>Não é cadastrado?<Link href="/register">Registrar</Link></p>
+                <p>Não é cadastrado? <Link href="/register" className=''>Registrar</Link></p>
             </div>
+          )}
         </form>
     </div>
   )

@@ -1,18 +1,15 @@
-import './globals.css'
+import '../../globals.css'
 
-export const metadata = {
-  title: 'Minha App de Fichas',
-  description: 'Gerencie seus personagens facilmente',
-}
+import React from 'react';
 
-export default function RootLayout({
+export default function LoginTemplate({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
     <html lang="pt-BR">
-      <body className="bg-black text-white">
+      <body className="body-login">
         <img
             src="/i-back.webp"
             alt="Background"
@@ -21,5 +18,5 @@ export default function RootLayout({
         {children}
       </body>
     </html>
-  )
+  );
 }
