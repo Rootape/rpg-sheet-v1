@@ -1,17 +1,19 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import AuthForm from '@/components/AuthForm'
-import { AuthAPI } from '@/lib/auth'
+import AuthForm from '@/app/components/AuthForm'
+//import { AuthAPI } from '@/lib/auth'
+import { loginUsuario } from './actions'
 
 export default function LoginPage() {
   const router = useRouter()
 
-  const handleLogin = (username: string, password: string) => {
-    const success = AuthAPI.login(username, password)
+  async function handleLogin(username: string, password: string, rememberMe: boolean) {
+    //const success = AuthAPI.login(username, password)
+    const result = await loginUsuario(username, password, rememberMe)
 
-    if (success) {
-      AuthAPI.setCurrentUser(username)
+    if (result.success) {
+      //AuthAPI.setCurrentUser(username)
       router.push('/dashboard')
     } else {
       alert('Usuário ou senha inválidos.')

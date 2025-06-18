@@ -2,6 +2,14 @@ import '../../globals.css'
 
 import React from 'react';
 
+export const metadata = {
+  title: 'Login',
+  description: 'Login na aplicacao',
+  icons: {
+    icon: '/i-back.webp',
+  },
+}
+
 export default function LoginTemplate({
   children,
 }: {

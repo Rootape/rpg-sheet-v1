@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import Navbar from '@/components/Navbar'
-import CharacterCard from '@/components/CharacterCard'
-import CreateCharacterButton from '@/components/CreateCharacterButton'
+import Navbar from '@/app/components/Navbar'
+import CharacterCard from '@/app/components/CharacterCard'
+import CreateCharacterButton from '@/app/components/CreateCharacterButton'
 import { AuthAPI } from '@/lib/auth'
 
 export default function DashboardPage() {

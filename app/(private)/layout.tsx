@@ -1,23 +1,22 @@
-import '../../globals.css'
-
-import React from 'react';
+import '../globals.css'
 
 export const metadata = {
-  title: 'Registrar',
-  description: 'Registrar na aplicacao',
+  title: 'Dashboard',
+  description: 'Gerencie seus personagens facilmente',
   icons: {
     icon: '/i-back.webp',
   },
 }
 
-export default function RegisterTemplate({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="pt-BR">
-      <body className="body-login">
+      <body className='body-login'>
         <img
             src="/i-back.webp"
             alt="Background"
@@ -26,5 +25,5 @@ export default function RegisterTemplate({
         {children}
       </body>
     </html>
-  );
+  )
 }

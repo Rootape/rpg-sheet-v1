@@ -6,13 +6,9 @@ import Link from 'next/link'
 interface AuthFormProps {
   type: 'login' | 'register'
   onSubmit: (username: string, password: string, remember: boolean) => void
-  showRedirectLink?: boolean
 }
 
-export default function AuthForm({
-  type,
-  onSubmit,
-}: AuthFormProps) {
+export default function AuthForm({type, onSubmit}: AuthFormProps) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [rememberMe, setRememberMe] = useState(false)
@@ -49,7 +45,13 @@ export default function AuthForm({
           </div>
           {type === 'login' && (
               <div className="remember-forgot">
-                  <label><input type="checkbox" className='custom-checkbox'/>Lembre de mim</label>
+                  <label>
+                    <input 
+                      type="checkbox" 
+                      className='custom-checkbox'
+                      onChange={(e) => setRememberMe(e.target.checked)}/>
+                    Lembre de mim
+                  </label>
               </div>
           )}
           <button type="submit" className="btn">Enviar</button>

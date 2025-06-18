@@ -4,7 +4,7 @@ import { useRouter, useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { AuthAPI } from '@/lib/auth'
 import { CharacterAPI, Character } from '@/lib/character'
-import CharacterViewForm from '@/components/CharacterViewForm'
+import CharacterViewForm from '@/app/components/CharacterViewForm'
 
 export default function ViewCharacterPage() {
   const router = useRouter()

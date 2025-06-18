@@ -4,7 +4,7 @@ import { useRouter, useParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { AuthAPI } from '@/lib/auth'
 import { CharacterAPI, Character } from '@/lib/character'
-import CharacterForm from '@/components/CharacterForm'
+import CharacterForm from '@/app/components/CharacterForm'
 
 export default function EditCharacterPage() {
   const router = useRouter()
